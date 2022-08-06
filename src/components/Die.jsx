@@ -1,6 +1,6 @@
 function Die(props) {
   return (
-    <div className="die">{props.value}</div>
+    <div style={{backgroundColor: props.isHeld ? "#59E391" : "#FFF"}} className="die" onClick={props.holdDice}>{props.value}</div>
   )
 }
 export default Die
