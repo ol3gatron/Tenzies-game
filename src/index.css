@@ -25,6 +25,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 
 .container {
@@ -32,7 +33,7 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 15px;
-  margin: 50px 0;
+  margin: 40px 0;
 }
 
 .die {
@@ -60,12 +61,28 @@ main {
   font-size: 18px;
   font-weight: 700;
   line-height: 19px;
-  padding: 15px 50px;
+  height: 50px;
+  width: 130px;
   cursor: pointer;
 }
 
 .roll-btn:active {
   transform: scale(0.98);
+}
+
+.main--title {
+  font-weight: 700;
+  color: #2B283A;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.mait--instructions {
+  max-width: 330px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
 }
 
 @media (max-width: 500px) {
