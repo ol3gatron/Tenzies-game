@@ -1,6 +1,9 @@
+import { useState } from "react"
 import Die from "./components/Die"
 
 function App() {
+  const [diceArray, setDiceArray] = useState(() => allNewDice(1, 6))
+
   function allNewDice(max, min) {
     const array = []
     for (let i = 0; i < 10; i++) {
@@ -9,21 +12,12 @@ function App() {
     return array
   }
 
-  console.log(allNewDice(1, 6))
+  console.log(diceArray)
 
   return (
     <main>
       <div className="container">
-        <Die value={3}/>
-        <Die value={5}/>
-        <Die value={2}/>
-        <Die value={1}/>
-        <Die value={6}/>
-        <Die value={9}/>
-        <Die value={2}/>
-        <Die value={2}/>
-        <Die value={4}/>
-        <Die value={5}/>
+        {diceArray.map((die) => <Die value={die}/>)}
       </div>
     </main>
   )
