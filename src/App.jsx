@@ -92,6 +92,8 @@ function App() {
         {tenzies && <Confetti height={window.height} />}
         </> :
         <>
+          <h1 className="main--title">Tenzies</h1>
+          <p className="main--instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
           {JSON.parse(localStorage.getItem("stats")) &&
             <p className="totalRolls">Best rolls: {JSON.parse(localStorage.getItem("stats")).rolls}</p>
           }
