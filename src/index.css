@@ -36,7 +36,7 @@ main {
   margin: 40px 0;
 }
 
-.die {
+/* .die {
   padding: 10px 15px;
   display: inline;
   border-radius: 3px;
@@ -47,6 +47,119 @@ main {
   text-align: center;
   cursor: pointer;
   user-select: none;
+} */
+
+.die > span {
+  width: 7px;
+  height: 7px;
+  border: 1px solid black;
+  margin: 7px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+}
+
+.die-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.die-2--second {
+  right: 0;
+  bottom: 0;
+}
+
+.die-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.die-3--first {
+  top: 0;
+  left: 0;
+}
+
+.die-3--second {
+  right: 0;
+  bottom: 0
+}
+
+.die-4--first {
+  top: 0;
+  right: 0;
+}
+
+.die-4--second {
+  bottom: 0;
+  right: 0;
+}
+
+.die-4--third {
+  bottom: 0;
+  left: 0;
+}
+
+.die-4--fourth {
+  top: 0;
+  left: 0;
+}
+
+.die-5--first {
+  top: 0;
+  right: 0;
+}
+
+.die-5--second {
+  bottom: 0;
+  right: 0;
+}
+
+.die-5--third {
+  bottom: 0;
+  left: 0;
+}
+
+.die-5--fourth {
+  top: 0;
+  left: 0;
+}
+
+.die-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.die-6-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.die-6 {
+  border-radius: 3px;
+  width: 45px;
+  height: 45px;
+  position: relative;
+  background-color: rgb(89, 227, 145);
+  box-shadow: 0 2px 2px #00000026;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.die-6-container > span {
+  width: 7px;
+  height: 7px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: #000;
+  margin: 3px 2px;
 }
 
 .die:active {
