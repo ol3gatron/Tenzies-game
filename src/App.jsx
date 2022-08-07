@@ -79,10 +79,8 @@ function App() {
     <main>
       {startGame ?
         <>
-        <div className="main--stats">
-        <p className="main--rolls">Rolls: {rolls}</p>
-        {startGame && <p>Time: {seconds}</p>}
-        </div>
+        <p className="main--rolls">🔄 {rolls}</p>
+        {startGame && <p className="main--time">⌛ {seconds}</p>}
         <h1 className="main--title">Tenzies</h1>
         <p className="main--instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
         <div className="container">
@@ -94,12 +92,14 @@ function App() {
         <>
           <h1 className="main--title">Tenzies</h1>
           <p className="main--instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+          <div className="total-stats">
           {JSON.parse(localStorage.getItem("stats")) &&
             <p className="totalRolls">Best rolls: {JSON.parse(localStorage.getItem("stats")).rolls}</p>
           }
           {JSON.parse(localStorage.getItem("stats")) &&
             <p className="totalTime">Best time: {JSON.parse(localStorage.getItem("stats")).time}</p>
           }
+          </div>
           <button className="roll-btn" onClick={startGameFunc}>Start game</button>
         </>
       }

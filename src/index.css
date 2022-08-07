@@ -17,19 +17,30 @@ body {
 }
 
 main {
+  width: 500px;
+  height: 500px;
   background-color: #F5F5F5;
-  min-width: 500px;
-  min-height: 500px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+}
+
+main > p, h1, div {
+  align-self: center;
+  justify-self: center;
 }
 
 .main--rolls {
-  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.main--time {
+  font-size: 12px;
+  grid-column: 3 / 4;
+  text-align: center;
 }
 
 .main--stats {
@@ -42,7 +53,8 @@ main {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  margin: 30px 0;
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
 }
 
 .die {
@@ -124,6 +136,10 @@ main {
   height: 50px;
   width: 130px;
   cursor: pointer;
+  align-self: end;
+  justify-self: center;
+  grid-row: 4 / 5;
+  grid-column: 2 / 3;
 }
 
 .roll-btn:active {
@@ -135,6 +151,8 @@ main {
   color: #2B283A;
   font-size: 25px;
   line-height: 30px;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
 }
 
 .main--instructions {
@@ -143,25 +161,28 @@ main {
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
+  grid-column: 2 / 3;
 }
 
-.totalTime {
-  margin-bottom: 70px;
-}
-
-.totalRolls, .totalTime {
-  padding: 5px;
-  font-size: 20px;
-  font-weight: 700;
+.total-stats {
+  grid-column: 2 / 3;
 }
 
 @media (max-width: 500px) {
   main {
-    min-width: 330px;
-    min-height: 330px;
+    max-width: 330px;
+    max-height: 330px;
   }
 
   .main--instructions {
     max-width: 250px;
+  }
+
+  .container {
+    padding: 10px 0;
+  }
+
+  .roll-btn {
+    margin-top: 10px;
   }
 }
