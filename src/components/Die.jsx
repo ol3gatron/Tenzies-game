@@ -1,7 +1,7 @@
 function Die(props) {
   const style = {
     backgroundColor: props.isHeld ? "#59E391" : "#FFF",
-
+    borderRadius: "3px",
     cursor: "pointer",
     userSelect: "none",
 

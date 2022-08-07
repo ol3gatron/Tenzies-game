@@ -28,6 +28,17 @@ main {
   padding: 10px;
 }
 
+.main--rolls {
+  padding: 10px;
+}
+
+.main--stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -35,19 +46,6 @@ main {
   gap: 15px;
   margin: 40px 0;
 }
-
-/* .die {
-  padding: 10px 15px;
-  display: inline;
-  border-radius: 3px;
-  font-size: 20px;
-  font-weight: 700;
-  color: #2B283A;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-} */
 
 .die > span {
   width: 7px;
@@ -190,12 +188,22 @@ main {
   line-height: 30px;
 }
 
-.mait--instructions {
+.main--instructions {
   max-width: 330px;
   text-align: center;
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
+}
+
+.totalTime {
+  margin-bottom: 100px;
+}
+
+.totalRolls, .totalTime {
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 @media (max-width: 500px) {
