@@ -23,7 +23,7 @@ main {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
 }
@@ -42,122 +42,71 @@ main {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 15px;
-  margin: 40px 0;
+  margin: 30px 0;
 }
 
-.die > span {
-  width: 7px;
-  height: 7px;
-  border: 1px solid black;
-  margin: 7px;
-  border-radius: 50%;
-  background-color: #000;
-  position: absolute;
-}
-
-.die-1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.die-2--second {
-  right: 0;
-  bottom: 0;
-}
-
-.die-3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.die-3--first {
-  top: 0;
-  left: 0;
-}
-
-.die-3--second {
-  right: 0;
-  bottom: 0
-}
-
-.die-4--first {
-  top: 0;
-  right: 0;
-}
-
-.die-4--second {
-  bottom: 0;
-  right: 0;
-}
-
-.die-4--third {
-  bottom: 0;
-  left: 0;
-}
-
-.die-4--fourth {
-  top: 0;
-  left: 0;
-}
-
-.die-5--first {
-  top: 0;
-  right: 0;
-}
-
-.die-5--second {
-  bottom: 0;
-  right: 0;
-}
-
-.die-5--third {
-  bottom: 0;
-  left: 0;
-}
-
-.die-5--fourth {
-  top: 0;
-  left: 0;
-}
-
-.die-5 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.die-6-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-
-.die-6 {
+.die {
   border-radius: 3px;
   width: 45px;
   height: 45px;
-  position: relative;
-  background-color: rgb(89, 227, 145);
   box-shadow: 0 2px 2px #00000026;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin: 5px;
+  display: grid;
   align-items: center;
+  justify-items: center;
+  cursor: pointer;
 }
 
-.die-6-container > span {
-  width: 7px;
-  height: 7px;
-  border: 1px solid black;
+.die > span {
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: #000;
-  margin: 3px 2px;
+}
+
+.die-1 {
+  grid-template-columns: 1fr;
+}
+
+.die-2, .die-4 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.die-2--second {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.die-3, .die-5 {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.die-3 > span {
+  grid-row: 2 / 3;
+}
+
+.die-5--second {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+
+.die-5--third {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.die-5--fourth {
+  grid-column: 3 / 4;
+}
+
+.die-5--fifth {
+  grid-row: 3 / 4;
+}
+
+.die-6 {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .die:active {
@@ -189,7 +138,7 @@ main {
 }
 
 .main--instructions {
-  max-width: 330px;
+  max-width: 250px;
   text-align: center;
   font-weight: 400;
   font-size: 13px;
@@ -208,7 +157,11 @@ main {
 
 @media (max-width: 500px) {
   main {
-    min-width: 360px;
-    min-height: 360px;
+    min-width: 330px;
+    min-height: 330px;
+  }
+
+  .main--instructions {
+    max-width: 250px;
   }
 }
